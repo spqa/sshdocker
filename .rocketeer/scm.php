@@ -10,7 +10,7 @@ return [
 
     // The SSH/HTTPS address to your repository
     // Example: https://github.com/vendor/website.git
-    'repository' => 'https://github.com/spqa/eduma.git',
+    'repository' => 'https://github.com/spqa/sshdocker',
 
     // The repository credentials : you can leave those empty
     // if you're using SSH or if your repository is public

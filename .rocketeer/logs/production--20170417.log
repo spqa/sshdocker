@@ -1,0 +1,117 @@
+20170417162718
+$ git clone "https://spqa:anhminhhehe7565775@github.com/spqa/sshdocker" "/home/www/sshdocker/releases/20170417162918" --branch="master" --depth="1"
+git clone "https://spqa:anhminhhehe7565775@github.com/spqa/sshdocker" "/home/www/sshdocker/releases/20170417162918" --branch="master" --depth="1"
+Cloning into '/home/www/sshdocker/releases/20170417162918'...
+$ cd /home/www/sshdocker/releases/20170417162918
+$ git submodule update --init --recursive
+cd /home/www/sshdocker/releases/20170417162918
+git submodule update --init --recursive
+
+which: no bundle in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin)
+/usr/bin/composer
+$ cd /home/www/sshdocker/releases/20170417162918
+$ /usr/bin/composer install --no-interaction --no-dev --prefer-dist
+cd /home/www/sshdocker/releases/20170417162918
+/usr/bin/composer install --no-interaction --no-dev --prefer-dist
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Loading composer repositories with package information
+Installing dependencies from lock file
+Package operations: 37 installs, 0 updates, 0 removals
+  - Installing doctrine/inflector (v1.1.0): Downloading (connecting...)Downloading (0%)           Downloading (100%)
+  - Installing erusev/parsedown (1.6.2): Downloading (connecting...)Downloading (0%)           Downloading (25%)Downloading (30%)Downloading (40%)Downloading (45%)Downloading (70%)Downloading (75%)Downloading (95%)Downloading (100%)
+  - Installing psr/http-message (1.0.1): Downloading (connecting...)Downloading (0%)           Downloading (65%)Downloading (100%)
+  - Installing guzzlehttp/psr7 (1.4.2): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing guzzlehttp/promises (v1.3.1): Downloading (connecting...)Downloading (0%)           Downloading (30%)Downloading (60%)Downloading (95%)Downloading (100%)
+  - Installing guzzlehttp/guzzle (6.2.3): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (35%)Downloading (40%)Downloading (50%)Downloading (55%)Downloading (65%)Downloading (70%)Downloading (80%)Downloading (85%)Downloading (95%)Downloading (100%)
+  - Installing jakub-onderka/php-console-color (0.1): Downloading (connecting...)Downloading (0%)           Downloading (50%)Downloading (100%)
+  - Installing symfony/polyfill-mbstring (v1.3.0): Downloading (connecting...)Downloading (0%)           Downloading (35%)Downloading (70%)Downloading (100%)
+  - Installing symfony/var-dumper (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing psr/log (1.0.2): Downloading (connecting...)Downloading (0%)           Downloading (15%)Downloading (100%)
+  - Installing symfony/debug (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (65%)Downloading (70%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing symfony/console (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing nikic/php-parser (v3.0.5): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2): Downloading (connecting...)Downloading (0%)           Downloading (65%)Downloading (100%)
+  - Installing dnoegel/php-xdg-base-dir (0.1): Downloading (connecting...)Downloading (0%)           Downloading (100%)
+  - Installing psy/psysh (v0.8.3): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing vlucas/phpdotenv (v2.4.0): Downloading (connecting...)Downloading (0%)           Downloading (80%)Downloading (100%)
+  - Installing symfony/css-selector (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing tijsverkoyen/css-to-inline-styles (2.2.0): Downloading (connecting...)Downloading (0%)           Downloading (40%)Downloading (90%)Downloading (100%)
+  - Installing symfony/routing (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing symfony/process (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (20%)Downloading (50%)Downloading (70%)Downloading (90%)Downloading (100%)
+  - Installing symfony/http-foundation (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing symfony/event-dispatcher (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (100%)
+  - Installing symfony/http-kernel (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing symfony/finder (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (100%)
+  - Installing swiftmailer/swiftmailer (v5.4.6): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing paragonie/random_compat (v2.0.10): Downloading (connecting...)Downloading (0%)           Downloading (35%)Downloading (70%)Downloading (90%)Downloading (100%)
+  - Installing ramsey/uuid (3.6.1): Downloading (connecting...)Downloading (0%)           Downloading (15%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (45%)Downloading (50%)Downloading (60%)Downloading (75%)Downloading (90%)Downloading (100%)
+  - Installing symfony/translation (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing nesbot/carbon (1.22.1): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (100%)
+  - Installing mtdowling/cron-expression (v1.2.0): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (100%)
+  - Installing monolog/monolog (1.22.1): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing league/flysystem (1.0.37): Downloading (connecting...)Downloading (0%)           Downloading (10%)Downloading (20%)Downloading (30%)Downloading (40%)Downloading (100%)
+  - Installing laravel/framework (v5.4.18): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing laravel/tinker (v1.0.0): Downloading (connecting...)Downloading (0%)           Downloading (100%)
+  - Installing phpseclib/phpseclib (2.0.4): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing laravelcollective/remote (v5.4.0): Downloading (connecting...)Downloading (100%)         
+Generating autoload files
+> Illuminate\Foundation\ComposerScripts::postInstall
+> php artisan optimize
+Generating optimized class loader
+The compiled services file has been removed.
+which: no npm in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin)
+$ cd /home/www/sshdocker/releases/20170417162918
+$ npm install
+cd /home/www/sshdocker/releases/20170417162918
+npm install
+bash: npm: command not found
+which: no bower in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin)
+which: no bower in (/home/www/sshdocker/releases/20170417162918/node_modules/.bin)
+$ cd /home/www/sshdocker/releases/20170417162918
+$ chmod -R 755 /home/www/sshdocker/releases/20170417162918/app/database/production.sqlite
+$ chmod -R g+s /home/www/sshdocker/releases/20170417162918/app/database/production.sqlite
+$ chown -R www-data:www-data /home/www/sshdocker/releases/20170417162918/app/database/production.sqlite
+cd /home/www/sshdocker/releases/20170417162918
+chmod -R 755 /home/www/sshdocker/releases/20170417162918/app/database/production.sqlite
+chmod -R g+s /home/www/sshdocker/releases/20170417162918/app/database/production.sqlite
+chown -R www-data:www-data /home/www/sshdocker/releases/20170417162918/app/database/production.sqlite
+chmod: cannot access ‘/home/www/sshdocker/releases/20170417162918/app/database/production.sqlite’: No such file or directory
+$ cd /home/www/sshdocker/releases/20170417162918
+$ chmod -R 755 /home/www/sshdocker/releases/20170417162918/storage
+$ chmod -R g+s /home/www/sshdocker/releases/20170417162918/storage
+$ chown -R www-data:www-data /home/www/sshdocker/releases/20170417162918/storage
+cd /home/www/sshdocker/releases/20170417162918
+chmod -R 755 /home/www/sshdocker/releases/20170417162918/storage
+chmod -R g+s /home/www/sshdocker/releases/20170417162918/storage
+chown -R www-data:www-data /home/www/sshdocker/releases/20170417162918/storage
+chown: invalid user: ‘www-data:www-data’
+$ cd /home/www/sshdocker/releases/20170417162918
+$ chmod -R 755 /home/www/sshdocker/releases/20170417162918/public
+$ chmod -R g+s /home/www/sshdocker/releases/20170417162918/public
+$ chown -R www-data:www-data /home/www/sshdocker/releases/20170417162918/public
+cd /home/www/sshdocker/releases/20170417162918
+chmod -R 755 /home/www/sshdocker/releases/20170417162918/public
+chmod -R g+s /home/www/sshdocker/releases/20170417162918/public
+chown -R www-data:www-data /home/www/sshdocker/releases/20170417162918/public
+chown: invalid user: ‘www-data:www-data’
+$ mkdir -p /home/www/sshdocker/shared/storage
+mkdir -p /home/www/sshdocker/shared/storage
+
+$ mv /home/www/sshdocker/releases/20170417162918/storage/logs /home/www/sshdocker/shared/storage/logs
+mv /home/www/sshdocker/releases/20170417162918/storage/logs /home/www/sshdocker/shared/storage/logs
+
+$ ln -s /home/www/sshdocker/shared/storage/logs /home/www/sshdocker/releases/20170417162918/storage/logs-temp
+$ mv -Tf /home/www/sshdocker/releases/20170417162918/storage/logs-temp /home/www/sshdocker/releases/20170417162918/storage/logs
+ln -s /home/www/sshdocker/shared/storage/logs /home/www/sshdocker/releases/20170417162918/storage/logs-temp
+mv -Tf /home/www/sshdocker/releases/20170417162918/storage/logs-temp /home/www/sshdocker/releases/20170417162918/storage/logs
+
+$ rm -rf /home/www/sshdocker/current
+rm -rf /home/www/sshdocker/current
+
+$ ln -s /home/www/sshdocker/releases/20170417162918 /home/www/sshdocker/current-temp
+$ mv -Tf /home/www/sshdocker/current-temp /home/www/sshdocker/current
+ln -s /home/www/sshdocker/releases/20170417162918 /home/www/sshdocker/current-temp
+mv -Tf /home/www/sshdocker/current-temp /home/www/sshdocker/current
+
+|=> Successfully deployed release 20170417162918
+|=> No releases to prune from the server

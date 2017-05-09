@@ -37,6 +37,14 @@ return [
             'agent'     => '',
             'timeout'   => 10,
         ],
+        'runtime' => array(
+            'host'      => '',
+            'username'  => '',
+            'password'  => '',
+            'key'       => '',
+            'keyphrase' => '',
+            'root'      => '/var/www',
+        ),
     ],
 
     /*
