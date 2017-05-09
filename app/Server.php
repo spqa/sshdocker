@@ -7,8 +7,10 @@ use Illuminate\Queue\SerializesModels;
 
 class Server extends Model
 {
-    protected $guarded=[];
-    public function vps(){
-        return $this->belongsTo(Vps::class,'vps_id');
+    protected $guarded = [];
+
+    public function vps()
+    {
+        return $this->belongsTo(Vps::class, 'vps_id');
     }
 }

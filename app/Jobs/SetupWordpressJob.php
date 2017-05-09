@@ -16,7 +16,7 @@ class SetupWordpressJob implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected $server;
-    public $tries=5;
+    public $tries = 5;
 
     /**
      * Create a new job instance.
@@ -25,7 +25,7 @@ class SetupWordpressJob implements ShouldQueue
      */
     public function __construct(Server $server)
     {
-     $this->server=$server;
+        $this->server = $server;
     }
 
     /**
@@ -38,15 +38,15 @@ class SetupWordpressJob implements ShouldQueue
     {
 //        dd($this->server);
 //        try {
-            //setup admin account and database
-            $WPCliRepository->install(
-                $this->server->name,
-                $WPCliRepository->dockerRepo->generateName($this->server->name)
-            );
-            //setup plugin for api call
-            $WPCliRepository->install_plugin($this->server->name, 'https://codeload.github.com/WP-API/Basic-Auth/zip/master');
+        //setup admin account and database
+        $WPCliRepository->install(
+            $this->server->name,
+            $WPCliRepository->dockerRepo->generateName($this->server->name)
+        );
+        //setup plugin for api call
+        $WPCliRepository->install_plugin($this->server->name, 'https://codeload.github.com/WP-API/Basic-Auth/zip/master');
 
-            //tranfer data
+        //tranfer data
 
 
 //        }catch(\Exception $exception){

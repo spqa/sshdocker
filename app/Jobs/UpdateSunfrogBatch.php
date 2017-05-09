@@ -30,8 +30,8 @@ class UpdateSunfrogBatch implements ShouldQueue
      */
     public function handle()
     {
-        $servers=Server::all();
-        foreach ($servers as $server){
+        $servers = Server::all();
+        foreach ($servers as $server) {
 
         }
 

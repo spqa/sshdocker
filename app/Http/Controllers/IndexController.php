@@ -37,7 +37,8 @@ class IndexController extends Controller
         return view('index1');
     }
 
-    public function list_domain(){
+    public function list_domain()
+    {
         return Server::all();
     }
 }

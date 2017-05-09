@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vps extends Model
 {
-    protected $table='vps';
-    protected $guarded=[];
+    protected $table = 'vps';
+    protected $guarded = [];
 
-    public function servers(){
+    public function servers()
+    {
         return $this->hasMany(Server::class);
     }
 }

@@ -14,25 +14,29 @@ use GuzzleHttp\Client;
 class SFLaravelRepository
 {
     public $client;
-    public $apikey='AIzaSyB49NzMIFNlIMmrNg1AnsB3gtBpwjgXOOk';
+    public $apikey = 'AIzaSyB49NzMIFNlIMmrNg1AnsB3gtBpwjgXOOk';
+
     /**
      * SFLaravelRepository constructor.
      */
     public function __construct(Client $client)
     {
-        $this->client=$client;
+        $this->client = $client;
     }
 
-    public function change_sunfrog_id($domain,$id){
-        $this->client->get('http://'.$domain.'/api/sunfrog/'.$id.'?key='.$this->apikey);
+    public function change_sunfrog_id($domain, $id)
+    {
+        $this->client->get('http://' . $domain . '/api/sunfrog/' . $id . '?key=' . $this->apikey);
     }
 
-    public function get_sunfrog_id($domain){
-        $result=$this->client->get('http://'.$domain.'/api/sunfrog?key='.$this->apikey)->getBody()->getContents();
+    public function get_sunfrog_id($domain)
+    {
+        $result = $this->client->get('http://' . $domain . '/api/sunfrog?key=' . $this->apikey)->getBody()->getContents();
         return $result;
     }
 
-    public function add_item(){
+    public function add_item()
+    {
 
 
     }
