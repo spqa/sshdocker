@@ -12,7 +12,7 @@
                                 {{--</ul>--}}
                             </div>
                             <span class="card-title">Số VPS</span>
-                            <span class="stats-counter"><span class="counter">48190</span><small>vps</small></span>
+                            <span class="stats-counter"><span class="counter">{{\App\Vps::count()}}</span><small>vps</small></span>
                         </div>
                         <div id="sparkline-bar"></div>
                     </div>
@@ -23,7 +23,7 @@
                             <div class="card-options">
                             </div>
                             <span class="card-title">Số Website</span>
-                            <span class="stats-counter"><span class="counter">83710</span><small>website(s)</small></span>
+                            <span class="stats-counter"><span class="counter">{{\App\Server::count()}}</span><small>website(s)</small></span>
                         </div>
                         <div id="sparkline-line"></div>
                     </div>
@@ -32,8 +32,8 @@
                     <div class="card stats-card">
                         <div class="card-content">
                             <span class="card-title">Reports</span>
-                            <span class="stats-counter"><span class="counter">23230</span><small>Last week</small></span>
-                            <div class="percent-info green-text">8% <i class="material-icons">trending_up</i></div>
+                            <span class="stats-counter"><span class="counter">0</span><small>Last week</small></span>
+                            <div class="percent-info green-text">0% <i class="material-icons">trending_up</i></div>
                         </div>
                         <div class="progress stats-card-progress">
                             <div class="determinate" style="width: 70%"></div>
