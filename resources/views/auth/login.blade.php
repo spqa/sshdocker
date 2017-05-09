@@ -95,8 +95,7 @@
                                 @endif
                             <div class="row">
                                 <form class="col s12" action="{{ route('login') }}" method="post">
-                                    {{csrf_field()}}
-
+                                    {!! csrf_field() !!}
                                     <div class="input-field col s12">
                                         <input id="email" name="email" type="email" class="validate">
                                         <label for="email">Email</label>
