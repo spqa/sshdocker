@@ -1,68 +1,129 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+    <!-- Title -->
+    <title>Alpha | Responsive Admin Dashboard Template</title>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive Admin Dashboard Template" />
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="author" content="Steelcoders" />
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+    <!-- Styles -->
+    <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+    <!-- Theme Styles -->
+    <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+</head>
+<body class="signin-page">
+<div class="loader-bg"></div>
+<div class="loader">
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
             </div>
         </div>
     </div>
 </div>
-@endsection
+<div class="mn-content valign-wrapper">
+    <main class="mn-inner container">
+        <div class="valign">
+            <div class="row">
+                <div class="col s12 m6 l4 offset-l4 offset-m3">
+                    <div class="card white darken-1">
+                        <div class="card-content ">
+                            <span class="card-title">Sign In</span>
+                            @if(count($errors->all())>0)
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                @foreach($errors->all() as $error)
+                                                    <span> {{$error}}</span>
+                                                    @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                            <div class="row">
+                                <form class="col s12" action="{{ route('login') }}" method="post">
+                                    {{csrf_field()}}
+
+                                    <div class="input-field col s12">
+                                        <input id="email" name="email" type="email" class="validate">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="password" name="password" type="password" class="validate">
+                                        <label for="password">Password</label>
+                                    </div>
+                                    <div class="col s12 right-align m-t-sm">
+                                        <button type="submit" class="waves-effect waves-light btn teal">sign in</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Javascripts -->
+<script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+<script src="assets/plugins/materialize/js/materialize.min.js"></script>
+<script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+<script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+<script src="assets/js/alpha.min.js"></script>
+
+</body>
+</html>

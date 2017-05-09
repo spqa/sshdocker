@@ -1,0 +1,134 @@
+20170417162718
+20170417162918
+$ git clone "https://spqa:anhminhhehe7565775@github.com/spqa/sshdocker" "/home/www/sshdocker/releases/20170509090141" --branch="master" --depth="1"
+git clone "https://spqa:anhminhhehe7565775@github.com/spqa/sshdocker" "/home/www/sshdocker/releases/20170509090141" --branch="master" --depth="1"
+Cloning into '/home/www/sshdocker/releases/20170509090141'...
+$ cd /home/www/sshdocker/releases/20170509090141
+$ git submodule update --init --recursive
+cd /home/www/sshdocker/releases/20170509090141
+git submodule update --init --recursive
+
+which: no bundle in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin)
+/usr/bin/composer
+$ cd /home/www/sshdocker/releases/20170509090141
+$ /usr/bin/composer install --no-interaction --no-dev --prefer-dist
+cd /home/www/sshdocker/releases/20170509090141
+/usr/bin/composer install --no-interaction --no-dev --prefer-dist
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Loading composer repositories with package information
+Installing dependencies from lock file
+Package operations: 59 installs, 0 updates, 0 removals
+  - Installing symfony/process (v3.2.7): Loading from cache
+  - Installing symfony/filesystem (v3.2.8): Downloading (connecting...)Downloading (0%)           Downloading (40%)Downloading (45%)Downloading (100%)
+  - Installing symfony/options-resolver (v3.2.8): Downloading (connecting...)Downloading (0%)           Downloading (55%)Downloading (90%)Downloading (100%)
+  - Installing psr/http-message (1.0.1): Loading from cache
+  - Installing php-http/message-factory (v1.0.2): Downloading (connecting...)Downloading (0%)           Downloading (70%)Downloading (100%)
+  - Installing php-http/promise (v1.0.0): Downloading (connecting...)Downloading (0%)           Downloading (80%)Downloading (100%)
+  - Installing php-http/httplug (v1.1.0): Downloading (connecting...)Downloading (0%)           Downloading (15%)Downloading (100%)
+  - Installing php-http/discovery (1.2.1): Downloading (connecting...)Downloading (0%)           Downloading (80%)Downloading (95%)Downloading (100%)
+  - Installing php-http/socket-client (v1.2.0): Downloading (connecting...)Downloading (100%)         
+  - Installing clue/stream-filter (v1.3.0): Downloading (connecting...)Downloading (0%)           Downloading (45%)Downloading (100%)
+  - Installing php-http/message (1.5.0): Downloading (connecting...)Downloading (0%)           Downloading (10%)Downloading (20%)Downloading (70%)Downloading (80%)Downloading (90%)Downloading (100%)
+  - Installing php-http/client-common (1.5.0): Downloading (connecting...)Downloading (0%)           Downloading (25%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (80%)Downloading (100%)
+  - Installing symfony/yaml (v3.2.7): Downloading (connecting...)Downloading (0%)           Downloading (10%)Downloading (25%)Downloading (35%)Downloading (40%)Downloading (50%)Downloading (65%)Downloading (75%)Downloading (80%)Downloading (90%)Downloading (100%)
+  - Installing symfony/polyfill-mbstring (v1.3.0): Loading from cache
+  - Installing psr/log (1.0.2): Loading from cache
+  - Installing symfony/debug (v3.2.7): Loading from cache
+  - Installing symfony/console (v3.2.7): Loading from cache
+  - Installing nikic/php-parser (v2.1.1): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing symfony/serializer (v3.2.8): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+  - Installing jane/runtime (v1.0.0): Downloading (connecting...)Downloading (100%)         
+  - Installing jane/openapi-runtime (v1.0.0): Downloading (connecting...)Downloading (100%)         
+  - Installing paragonie/random_compat (v2.0.10): Loading from cache
+  - Installing symfony/polyfill-php70 (v1.3.0): Downloading (connecting...)Downloading (0%)           Downloading (70%)Downloading (100%)
+  - Installing symfony/inflector (v3.2.8): Downloading (connecting...)Downloading (0%)           Downloading (75%)Downloading (100%)
+  - Installing symfony/property-access (v3.2.8): Downloading (connecting...)Downloading (0%)           Downloading (15%)Downloading (25%)Downloading (40%)Downloading (60%)Downloading (65%)Downloading (90%)Downloading (100%)
+  - Installing doctrine/inflector (v1.1.0): Loading from cache
+  - Installing jane/jane (v1.5.0): Downloading (connecting...)Downloading (100%)         
+  - Installing fitbug/symfony-yaml-serializer-encoder-decoder (v0.1.1): Downloading (connecting...)Downloading (100%)         
+  - Installing jane/open-api (v1.3.0): Downloading (connecting...)Downloading (100%)         
+  - Installing guzzlehttp/psr7 (1.4.2): Loading from cache
+  - Installing docker-php/docker-php (1.24.0): Downloading (connecting...)Downloading (100%)         
+  - Installing erusev/parsedown (1.6.2): Loading from cache
+  - Installing guzzlehttp/promises (v1.3.1): Loading from cache
+  - Installing guzzlehttp/guzzle (6.2.3): Loading from cache
+  - Installing jakub-onderka/php-console-color (0.1): Loading from cache
+  - Installing symfony/var-dumper (v3.2.7): Loading from cache
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2): Loading from cache
+  - Installing dnoegel/php-xdg-base-dir (0.1): Loading from cache
+  - Installing psy/psysh (v0.8.3): Loading from cache
+  - Installing vlucas/phpdotenv (v2.4.0): Loading from cache
+  - Installing symfony/css-selector (v3.2.7): Loading from cache
+  - Installing tijsverkoyen/css-to-inline-styles (2.2.0): Loading from cache
+  - Installing symfony/routing (v3.2.7): Loading from cache
+  - Installing symfony/http-foundation (v3.2.7): Loading from cache
+  - Installing symfony/event-dispatcher (v3.2.7): Loading from cache
+  - Installing symfony/http-kernel (v3.2.7): Loading from cache
+  - Installing symfony/finder (v3.2.7): Loading from cache
+  - Installing swiftmailer/swiftmailer (v5.4.6): Loading from cache
+  - Installing ramsey/uuid (3.6.1): Loading from cache
+  - Installing symfony/translation (v3.2.7): Loading from cache
+  - Installing nesbot/carbon (1.22.1): Loading from cache
+  - Installing mtdowling/cron-expression (v1.2.0): Loading from cache
+  - Installing monolog/monolog (1.22.1): Loading from cache
+  - Installing league/flysystem (1.0.37): Loading from cache
+  - Installing laravel/framework (v5.4.18): Loading from cache
+  - Installing laravel/tinker (v1.0.0): Loading from cache
+  - Installing phpseclib/phpseclib (2.0.4): Loading from cache
+  - Installing laravelcollective/remote (v5.4.0): Loading from cache
+  - Installing predis/predis (v1.1.1): Downloading (connecting...)Downloading (0%)           Downloading (5%)Downloading (10%)Downloading (15%)Downloading (20%)Downloading (25%)Downloading (30%)Downloading (35%)Downloading (40%)Downloading (45%)Downloading (50%)Downloading (55%)Downloading (60%)Downloading (65%)Downloading (70%)Downloading (75%)Downloading (80%)Downloading (85%)Downloading (90%)Downloading (95%)Downloading (100%)
+Generating autoload files
+> Illuminate\Foundation\ComposerScripts::postInstall
+> php artisan optimize
+Generating optimized class loader
+The compiled services file has been removed.
+which: no npm in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin)
+$ cd /home/www/sshdocker/releases/20170509090141
+$ npm install
+cd /home/www/sshdocker/releases/20170509090141
+npm install
+bash: npm: command not found
+which: no bower in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin)
+which: no bower in (/home/www/sshdocker/releases/20170509090141/node_modules/.bin)
+$ cd /home/www/sshdocker/releases/20170509090141
+$ chmod -R 755 /home/www/sshdocker/releases/20170509090141/app/database/production.sqlite
+$ chmod -R g+s /home/www/sshdocker/releases/20170509090141/app/database/production.sqlite
+$ chown -R www-data:www-data /home/www/sshdocker/releases/20170509090141/app/database/production.sqlite
+cd /home/www/sshdocker/releases/20170509090141
+chmod -R 755 /home/www/sshdocker/releases/20170509090141/app/database/production.sqlite
+chmod -R g+s /home/www/sshdocker/releases/20170509090141/app/database/production.sqlite
+chown -R www-data:www-data /home/www/sshdocker/releases/20170509090141/app/database/production.sqlite
+chmod: cannot access ‘/home/www/sshdocker/releases/20170509090141/app/database/production.sqlite’: No such file or directory
+$ cd /home/www/sshdocker/releases/20170509090141
+$ chmod -R 755 /home/www/sshdocker/releases/20170509090141/storage
+$ chmod -R g+s /home/www/sshdocker/releases/20170509090141/storage
+$ chown -R www-data:www-data /home/www/sshdocker/releases/20170509090141/storage
+cd /home/www/sshdocker/releases/20170509090141
+chmod -R 755 /home/www/sshdocker/releases/20170509090141/storage
+chmod -R g+s /home/www/sshdocker/releases/20170509090141/storage
+chown -R www-data:www-data /home/www/sshdocker/releases/20170509090141/storage
+chown: invalid user: ‘www-data:www-data’
+$ cd /home/www/sshdocker/releases/20170509090141
+$ chmod -R 755 /home/www/sshdocker/releases/20170509090141/public
+$ chmod -R g+s /home/www/sshdocker/releases/20170509090141/public
+$ chown -R www-data:www-data /home/www/sshdocker/releases/20170509090141/public
+cd /home/www/sshdocker/releases/20170509090141
+chmod -R 755 /home/www/sshdocker/releases/20170509090141/public
+chmod -R g+s /home/www/sshdocker/releases/20170509090141/public
+chown -R www-data:www-data /home/www/sshdocker/releases/20170509090141/public
+chown: invalid user: ‘www-data:www-data’
+$ rm -rf /home/www/sshdocker/releases/20170509090141/storage/logs
+rm -rf /home/www/sshdocker/releases/20170509090141/storage/logs
+
+$ ln -s /home/www/sshdocker/shared/storage/logs /home/www/sshdocker/releases/20170509090141/storage/logs-temp
+$ mv -Tf /home/www/sshdocker/releases/20170509090141/storage/logs-temp /home/www/sshdocker/releases/20170509090141/storage/logs
+ln -s /home/www/sshdocker/shared/storage/logs /home/www/sshdocker/releases/20170509090141/storage/logs-temp
+mv -Tf /home/www/sshdocker/releases/20170509090141/storage/logs-temp /home/www/sshdocker/releases/20170509090141/storage/logs
+
+$ ln -s /home/www/sshdocker/releases/20170509090141 /home/www/sshdocker/current-temp
+$ mv -Tf /home/www/sshdocker/current-temp /home/www/sshdocker/current
+ln -s /home/www/sshdocker/releases/20170509090141 /home/www/sshdocker/current-temp
+mv -Tf /home/www/sshdocker/current-temp /home/www/sshdocker/current
+
+|=> Successfully deployed release 20170509090141
+|=> No releases to prune from the server
