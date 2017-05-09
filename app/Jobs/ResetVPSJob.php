@@ -15,6 +15,7 @@ class ResetVPSJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     public $vps;
+
     /**
      * Create a new job instance.
      *
@@ -22,7 +23,7 @@ class ResetVPSJob implements ShouldQueue
      */
     public function __construct(Vps $vps)
     {
-        $this->vps=$vps;
+        $this->vps = $vps;
     }
 
     /**
@@ -32,7 +33,7 @@ class ResetVPSJob implements ShouldQueue
      */
     public function handle()
     {
-        $commands=[
+        $commands = [
             'docker stop $(docker ps -a -q)',
             'yum -y remove docker-ce',
             'rm -rf /var/lib/docker',
@@ -41,17 +42,16 @@ class ResetVPSJob implements ShouldQueue
         ];
 
         Config::set('remote.connections.runtime.host', $this->vps->ip);
-        Config::set('remote.connections.runtime.port', !empty($this->vps->port)?$this->vps->port:22);
-        Config::set('remote.connections.runtime.username', !empty($this->vps->username)?$this->vps->username:'root');
+        Config::set('remote.connections.runtime.port', !empty($this->vps->port) ? $this->vps->port : 22);
+        Config::set('remote.connections.runtime.username', !empty($this->vps->username) ? $this->vps->username : 'root');
         Config::set('remote.connections.runtime.password', $this->vps->password);
 
-        RemoteFacade::into('runtime')->run($commands, function($line)
-        {
-            $this->vps->progress.=$line.PHP_EOL;
+        RemoteFacade::into('runtime')->run($commands, function ($line) {
+            $this->vps->progress .= $line . PHP_EOL;
             $this->vps->save();
         });
 
-        $this->vps->status='Reset Successfully!';
+        $this->vps->status = 'Reset Successfully!';
         $this->vps->save();
 
         dispatch(new SetupVPSJob($this->vps));

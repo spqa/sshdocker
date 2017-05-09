@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: super
- * Date: 4/15/2017
- * Time: 4:18 PM
- */
 
 namespace App\Repositories;
 
@@ -40,11 +34,11 @@ class DockerRepository
 
     public function add($domain, $keywords)
     {
-        if (empty(Cache::get('port'))){
-            Cache::forever('port',5000);
+        if (empty(Cache::get('port'))) {
+            Cache::forever('port', 5000);
         }
         Cache::increment('port');
-        $port=Cache::get('port');
+        $port = Cache::get('port');
 //        dd($port);
         $params = [
             'body' => json_encode([
@@ -66,7 +60,7 @@ class DockerRepository
 
         $result = $this->client->request('post', $this->endpoint . '/containers/create?name=' . $this->generateName($domain), $params);
 //        dd($result->getBody()->getContents());
-        if ($result->getStatusCode()==409){
+        if ($result->getStatusCode() == 409) {
             throw new HttpConflictException();
         }
         $this->start($this->generateName($domain));
@@ -76,7 +70,7 @@ class DockerRepository
 
     public function start($id)
     {
-        $result=$this->client->request('post', $this->endpoint . '/containers/' . $id . '/start?detachKeys=ctrl-p ctrl-q');
+        $result = $this->client->request('post', $this->endpoint . '/containers/' . $id . '/start?detachKeys=ctrl-p ctrl-q');
 
     }
 
@@ -85,50 +79,55 @@ class DockerRepository
         $this->client->request('delete', $this->endpoint . '/containers/' . $id . '?force=true');
     }
 
-    public function getIdByName($name){
+    public function getIdByName($name)
+    {
         return $this->getAllInfo($name)['Id'];
     }
 
-    public function getAllInfo($name){
-        return json_decode($this->client->get($this->endpoint.'/containers/'.$name.'/json'));
+    public function getAllInfo($name)
+    {
+        return json_decode($this->client->get($this->endpoint . '/containers/' . $name . '/json'));
     }
 
 
-    public function generateName($domain){
-        return str_replace('-','',str_slug($domain));
+    public function generateName($domain)
+    {
+        return str_replace('-', '', str_slug($domain));
     }
 
-    public function exec($id,$command){
-        $params=[
-            'body'=>json_encode([
-                'AttachStdin'=>true,
-                'AttachStdout'=>true,
-                'AttachStderr'=>true,
-                'DetachKeys'=>'ctrl-p,ctrl-q',
-                'Tty'=>false,
-                'Cmd'=>$command
+    public function exec($id, $command)
+    {
+        $params = [
+            'body' => json_encode([
+                'AttachStdin' => true,
+                'AttachStdout' => true,
+                'AttachStderr' => true,
+                'DetachKeys' => 'ctrl-p,ctrl-q',
+                'Tty' => false,
+                'Cmd' => $command
             ]),
-            'headers'=>[
-                'Content-Type'=>'application/json'
+            'headers' => [
+                'Content-Type' => 'application/json'
             ]
         ];
 //        dd(json_encode($params));
-        $exec_id= json_decode($this->client->post($this->endpoint.'/containers/'.$id.'/exec',$params)->getBody()->getContents())->Id;
-        $result=$this->client->post($this->endpoint.'/exec/'.$exec_id.'/start',['json'=>[
-            "Detach"=>false,
-            'Tty'=>false
+        $exec_id = json_decode($this->client->post($this->endpoint . '/containers/' . $id . '/exec', $params)->getBody()->getContents())->Id;
+        $result = $this->client->post($this->endpoint . '/exec/' . $exec_id . '/start', ['json' => [
+            "Detach" => false,
+            'Tty' => false
         ]])->getBody()->getContents();
         return $result;
     }
 
-    public function setup_nginx(){
+    public function setup_nginx()
+    {
         $params = [
             'body' => json_encode([
                 'Image' => 'jwilder/nginx-proxy',
                 'HostConfig' => [
                     'PortBindings' => ['80/tcp' => [["HostPort" => "80", "HostIp" => ""]]],
 //                    'NetworkMode' => 'docker_default'
-                    'Binds'=>[
+                    'Binds' => [
                         '/var/run/docker.sock:/tmp/docker.sock:ro'
                     ]
                 ],
@@ -142,15 +141,14 @@ class DockerRepository
         ];
 
         $result = $this->client->request('post', $this->endpoint . '/containers/create?name=nginxproxy', $params);
-//        dd($result->getBody()->getContents());
         $this->start('nginxproxy');
         return $result;
     }
 
-    public function build($image,$tag){
-        $result=$this->client->request('post',$this->endpoint.'/images/create?fromImage='.$image.'&tag='.$tag);
+    public function build($image, $tag)
+    {
+        $result = $this->client->request('post', $this->endpoint . '/images/create?fromImage=' . $image . '&tag=' . $tag);
 
-//        dd($result->getBody()->getContents());
         return $result->getBody()->getContents();
     }
 }
