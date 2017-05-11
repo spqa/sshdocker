@@ -8,6 +8,7 @@ use Illuminate\Console\Command;
 
 class ConvertData extends Command
 {
+    //https://woocommerce.github.io/woocommerce-rest-api-docs/v3.html?javascript#create-a-product
     const consumer_key = 'ck_570a4cb254954c6aa48731a9d37bc3d3b95b8306';
     const consumer_secret = 'cs_7c05eeea1179c31e30e36dc94f2b17f11d58c4ce';
     const url = 'http://wpshop.com';
