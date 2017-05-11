@@ -54,6 +54,36 @@ return [
             'engine' => null,
         ],
 
+        'laravel_mysql' => [
+            'driver' => 'mysql',
+            'host' => '45.76.101.61',
+            'port' => '5689',
+            'database' => 'sunfrog',
+            'username' => 'root',
+            'password' => 'moridaej1koongeeg5xaenuePaeh9wae',
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+        'wp_mysql' => [
+            'driver' => 'mysql',
+            'host' => '127.0.0.1',
+            'port' => '3306',
+            'database' => 'wpshop',
+            'username' => 'root',
+            'password' => '123456',
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
